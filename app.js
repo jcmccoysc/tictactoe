@@ -1,6 +1,6 @@
 let play_board = ["", "", "", "", "", "", "", "", ""];
-const player = "P";
-const computer = "C";
+const player = "X";
+const computer = "O";
 let board_full = false;
 let ai_level;
 
