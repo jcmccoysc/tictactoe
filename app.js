@@ -1,6 +1,6 @@
 let play_board = ["", "", "", "", "", "", "", "", ""];
-const player = "P";
-const computer = "C";
+const player = "X";
+const computer = "O";
 let board_full = false;
 let ai_level;
 
@@ -170,6 +170,7 @@ const checkWinner = () => {
     var loss2 = 0;
     var draw1 = 0;
     var draw2 = 0;
+    var maxrounds = 5;
 
     const winner_statement = document.getElementById("winner");
     const audio = document.querySelector("audio");
@@ -266,6 +267,14 @@ const reset_board = () => {
     document.querySelector("#ai_level").disabled = false;
     const audio = document.querySelector("audio");
     render_board();
+    if(playerstat1 == maxrounds || computerstat1 == maxrounds || draw2 == maxrounds){
+        playerstat1 = 0;
+        computerstat1 = 0;
+        loss1 = 0;
+        loss2 = 0;
+        draw1 = 0;
+        draw2 = 0;
+    }
     randomizeStart();
 }
 
